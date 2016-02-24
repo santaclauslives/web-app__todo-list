@@ -25,4 +25,14 @@ MyApp.post "/logins/login_create" do
   else
     erb :"logins/login_failed"
   end
+
+MyApp.get "logins/login_success" do
+  erb :"/todos/todo_home"
+end
+
+MyApp.get "logins/login_failed" do
+  erb :"/logins/login_new"
+end
+
+
 end
