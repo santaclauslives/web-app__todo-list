@@ -5,11 +5,11 @@
 # and deleted (i.e. 'logging out').
 # 
 # Reading and Updating a login, however, make a little less sense.
-MyApp.get "login/delete" do
+MyApp.get "logins/login/delete" do
   session[:user_id] = nil
 end
 
-MyApp.get "/login/new" do
+MyApp.get "/logins/new" do
     # Show form that lets a person create a new login
     erb :"login/new"
 end
