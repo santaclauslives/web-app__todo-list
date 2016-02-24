@@ -11,7 +11,7 @@ end
 
 MyApp.get "/login/new" do
     # Show form that lets a person create a new login
-    erb :"logins/new"
+    erb :"login/new"
 end
 
 MyApp.post "/login/create" do
