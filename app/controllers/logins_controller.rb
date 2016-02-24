@@ -16,13 +16,13 @@ end
 
 MyApp.post "/logins/login_create" do
 
-@user = User.find_by_email(params[email])
+  @user = User.find_by_email(params[:email])
 
   if @user.password == params[:password]
     session[:user_id] = @user.id
     # Process the form to log a person in.
-    erb :"login_success"
+    erb :"logins/login_success"
   else
-    erb :"login_failed"
+    erb :"logins/login_failed"
   end
 end
