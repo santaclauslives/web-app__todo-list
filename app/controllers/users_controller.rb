@@ -1,17 +1,21 @@
-MyApp.get "/user_new" do  
+MyApp.get "/user/new" do  
 
 
   erb :"user_new"
 end
 
 
-MyApp.post "/user_create/" do
+MyApp.post "/user/create" do
   @user = User.new
+  @user.name = (params[:name])
   @user.email = (params[:email])
   @user.password = (params[:password])
   @user.save
 
-  erb :"success_user_create"
+  erb :"user_create"
 end
+
+
+
 
 
