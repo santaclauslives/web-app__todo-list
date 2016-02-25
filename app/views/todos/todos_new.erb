@@ -1,0 +1,24 @@
+
+
+
+
+<h1>Give somebody this job!</h1>
+<p></p>
+
+<form action = "/todos/todos_create" method="post"> 
+
+  Title:
+    <input type ="text" name="title" placeholder="title">
+  Description:
+    <input type ="text" name="description" placeholder="description">
+  Completed:
+    <input type ="checkbox" name="completed[]" placeholder="completed">
+  ID:
+    <input type ="integer" value="<%= (session[:user_id]) %>">
+
+    <input type ="submit">
+  
+</form>
+
+
+

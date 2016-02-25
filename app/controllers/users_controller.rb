@@ -1,3 +1,8 @@
+# MyApp.before 
+
+
+
+
 MyApp.get "/users/user_new" do  
 
 
@@ -19,19 +24,6 @@ MyApp.get "/users/user_create" do
   erb :"/logins/login_new"
 end
 
-# MyApp.post "/logins/login_create" do
-
-#   @user = User.find_by_email(params[:email])
-
-#   if @user && @user.password == params[:password]
-#     session[:user_id] = @user.id
-#     # Process the form to log a person in.
-#    
-#     erb :"logins/login_success"
-#   else
-#     erb :"logins/login_failed"
-#   end
-# end
 
 
 MyApp.post "/users/user_delete" do
@@ -48,7 +40,16 @@ MyApp.post "/users/user_delete" do
 erb :"/user_delete_success"
 end
 
-MyApp.post "/users/user_update" do
+#to show the update form 
+MyApp.get "/users/:id/user_edit" do
+
+@user = User.find_by_id(session[:user_id])
+
+  erb :"/users/:id/user_edit"
+end
+
+#to process the update form
+MyApp.post "/users/:id/user_edit" do
   @user = User.find_by_id(session[:user_id])
   @user.name = (params[:name]) #put these in the form. leave them here also
   @user.email = (params[:email])

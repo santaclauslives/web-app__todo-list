@@ -7,6 +7,25 @@
 Welcome to the ToDo List!
 
 Get started now.
-<!-- 
 
-This exercise made me think of a program that already exists. Call it Barter. I post stuff on my to do list that I don't want to do or I'm bad at, you say you will do item 3 or whatever in exchange for your item 5 on your todo list. Just a thought. -->
+<!-- The ToDo list will be a list of Array objects. Use an each do loop to show the items on the page. Todo "completed" should just be a check box.
+ -->
+
+<h2>ToDos</h2>
+
+  <p><% @todos.each do |todo| %></p><br>
+
+    <p><%= todo.completed %></p> <p><%= todo.title %></p> <p><%= todo.(session[:user_id] %></p><br>
+    <p><%= todo.description %></p>
+  end
+
+
+
+# <!-- Have to think about who exactly can delete an item. #to delete an item
+# get "/todos/todo_delete/:id" do
+
+# @todo = Todos.find_by_id(params[:id])
+# @todo.delete
+#   erb: "/todos/todo_home"
+# end -->
+# <!-- 
