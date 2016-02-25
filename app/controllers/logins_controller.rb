@@ -18,21 +18,19 @@ MyApp.post "/logins/login_create" do
 
   @user = User.find_by_email(params[:email])
 
-  if @user.password == params[:password]
+  if @user && @user.password == params[:password]
     session[:user_id] = @user.id
     # Process the form to log a person in.
     erb :"logins/login_success"
   else
     erb :"logins/login_failed"
   end
+end
 
-MyApp.get "logins/login_success" do
+MyApp.get "/logins/login_success" do
   erb :"/todos/todo_home"
 end
 
-MyApp.get "logins/login_failed" do
+MyApp.get "/logins/login_failed" do
   erb :"/logins/login_new"
-end
-
-
 end

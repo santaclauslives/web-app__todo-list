@@ -1,0 +1,16 @@
+
+
+<h1>Delete this User</h1>
+<p></p>
+
+
+
+<!-- 
+
+don't need form. Need a link just to delete the user that is logged. @user.id will already be set and delete the user by deleting User.find_by_id(session[:user_id]) that will pull up the current user and from there @user.delete. 
+
+and I retrieve it in a view as e.g. -->
+
+
+
+    User id: <%= session[:user_id] %>

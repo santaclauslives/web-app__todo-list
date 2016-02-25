@@ -1,0 +1,18 @@
+<h1>Update Your Information</h1>
+<p></p>
+
+<form action = "/users/user_update" method="post"> 
+
+<%= @user.id = session[:user_id] %>
+
+  Name:
+    <input type ="text" name="name" value=<%= session[:name] %>>
+  Email:
+    <input type ="text" name="email" value=<%= session[:email] %>>
+  Password:
+    <input type ="text" name="password" value=<%= session[:password] %>>
+
+
+  <input type ="submit">
+  
+</form>
