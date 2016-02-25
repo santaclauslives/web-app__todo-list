@@ -27,7 +27,7 @@ MyApp.get "/todos/todos_new" do
   if @current_user != nil
     erb :"todos/todos_new"
   else
-    erb :"logins/login_new"
+    redirect "/logins/login_new"
   end
 end
 #This controller action will process the new todo form to create a record of a new todo.
