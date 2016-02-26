@@ -16,4 +16,14 @@
   
 </form>
 
- <button type ="button"><a href="/todos/todos_delete/<%= @todos.id %>">Delete  </a></button>
+
+----------------------------
+
+<h1>Delete this Todo</h1>
+
+<form action = "/todos/todos_delete/<%= @todos.id %>" method="post">
+
+      <input type ="submit" value="delete">
+
+</form>
+    

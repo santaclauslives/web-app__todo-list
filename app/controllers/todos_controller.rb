@@ -62,7 +62,7 @@ MyApp.post "/todos/todos_create" do
   erb :"/todos/todos_create" #build a success page with link to home and link to add another todo and link to logout
 end
 
-
+# MyApp.get "/todos/todos_delete/:id"
 #I am asserting that "delete" is the ultimate edit, also asserting the users would prefer to delete from the edit page rather than have to go to another page to do that. So I have added a delete button to the edit page. 
 
 MyApp.post "/todos/todos_delete/:id" do
