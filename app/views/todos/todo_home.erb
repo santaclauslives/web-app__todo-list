@@ -15,8 +15,8 @@ Get started now.
 
   <p><% @todos.each do |todo| %></p><br>
 
-    <p><%= todo.completed %></p> <p><%= todo.title %></p> </p><br>
-    <p><%= todo.description %></p><br>
+    <p>Done?: <%= todo.completed %>  ToDo: <%= todo.title %></p>
+    <p>Description: <%= todo.description %></p>
  <% end %>
 
 
